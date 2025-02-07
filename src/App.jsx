@@ -37,7 +37,7 @@ export default function App() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Home Section */}
       <section className="home d-flex align-items-center justify-content-center" id="home">
   <Carousel className="w-100">
     {/* Carousel Item 1 */}
@@ -109,69 +109,74 @@ export default function App() {
 
 
       {/* Products Section */}
-      <section className="products container my-4" id="products">
-  <h2>Products</h2>
+<section className="products container my-4" id="products">
+      <h2>Products</h2>
 
-  {/* Anta Products */}
-  <div className="row">
-    {[
-      { image: logoanta, description: "Lightweight sneakers for unmatched comfort during workouts.", price: "89.99" },
-      { image: logoanta, description: "Breathable mesh upper with a modern design for an athletic look.", price: "9.99" },
-      { image: logoanta, description: "Durable and stylish, perfect for both sports and casual outings.", price: "09.99" },
-      { image: logoanta, description: "Advanced traction and cushioning for top-tier performance.", price: "119.99" },
-      { image: logoanta, description: "Versatile shoes designed to fit any active lifestyle.", price: "129.99" }
-    ].map((item, index) => (
-      <div className="col-md-2 mb-4" key={index}>
-        <div className="card">
-          {/* Anta logo background */}
-          <img alt="Anta Logo" className="nike-logo" />
-          {/* Product image */}
-          <img
-            src={item.image}
-            className="card-img-top"
-            alt={`Anta ${index + 1}`}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Anta {index + 1}</h5>
-            <p className="card-text">{item.description}</p>
-            <p className="card-text text-muted">Price: {item.price}</p>
-            <button className="btn btn-primary">Buy</button>
+      {/* Anta Products */}
+      <div className="row">
+        {[
+          { image: logoanta, description: "1", price: "89.99" },
+          { image: logoanta, description: "2", price: "9.99" },
+          { image: logoanta, description: "3", price: "09.99" },
+          { image: logoanta, description: "4", price: "119.99" },
+          { image: logoanta, description: "5", price: "129.99" }
+        ].map((item, index) => (
+          <div className="col-md-2 mb-4" key={index}>
+            <div className="card">
+              {/* Anta logo background */}
+              <img alt="Anta Logo" className="nike-logo" />
+              {/* Product image with background */}
+              <div className="shoe-image-container">
+                <img
+                  src={item.image}
+                  className="card-img-top"
+                  alt={`Anta ${index + 1}`}
+                />
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">Anta {index + 1}</h5>
+                <p className="card-text">{item.description}</p>
+                <p className="card-text text-muted">Price: {item.price}</p>
+                <button className="btn btn-primary">Buy</button>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-    ))}
-  </div>
 
-  {/* Jordan Products */}
-  <div className="row">
-    {[
-      { image: sneaker, description: "Classic design with premium leather for lasting appeal.", price: "150.00" },
-      { image: sneaker, description: "Sleek silhouette with responsive cushioning for active wear.", price: "160.00" },
-      { image: sneaker, description: "Iconic colors and superior arch support for comfort.", price: "170.00" },
-      { image: sneaker, description: "Engineered for athletes, offering maximum energy return.", price: "180.00" },
-      { image: sneaker, description: "Retro-inspired style with modern comfort and durability.", price: "190.00" }
-    ].map((item, index) => (
-      <div className="col-md-2 mb-4" key={index}>
-        <div className="card">
-          {/* Nike logo background */}
-          <img src={logonike} alt="Nike Logo" className="nike-logo" />
-          {/* Product image */}
-          <img
-            src={item.image}
-            className="card-img-top"
-            alt={`Jordan ${index + 1}`}
-          />
-          <div className="card-body">
-            <h5 className="card-title">Jordan {index + 1}</h5>
-            <p className="card-text">{item.description}</p>
-            <p className="card-text text-muted">Price: {item.price}</p>
-            <button className="btn btn-primary">Buy</button>
+      {/* Jordan Products */}
+      <div className="row">
+        {[
+          { image: sneaker, description: "1", price: "150.00", backgroundColor: "#021627" },
+          { image: sneaker, description: "2", price: "160.00" },
+          { image: sneaker, description: "3", price: "170.00" },
+          { image: sneaker, description: "4", price: "180.00" },
+          { image: sneaker, description: "5", price: "190.00" }
+        ].map((item, index) => (
+          <div className="col-md-2 mb-4" key={index}>
+            <div className="card">
+              {/* Nike logo background */}
+              <img src={logonike} alt="Nike Logo" className="nike-logo" />
+              {/* Product image with background */}
+              <div className="shoe-image-container">
+                <img
+                  src={item.image}
+                  className="card-img-top"
+                  alt={`Jordan ${index + 1}`}
+                />
+              </div>
+              <div className="card-body">
+                <h5 className="card-title">Jordan {index + 1}</h5>
+                <p className="card-text">{item.description}</p>
+                <p className="card-text text-muted">Price: {item.price}</p>
+                <button className="btn btn-primary">Buy</button>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-    ))}
-  </div>
-</section>
+    </section>
+
 
 
 
