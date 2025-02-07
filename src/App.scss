@@ -1,0 +1,241 @@
+/* App.scss */
+
+/* Variables */
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$dark-color: #343a40;
+$light-color: #f8f9fa;
+$dark-border: #333;
+$primary-hover-color: darken($primary-color, 10%);
+$primary-color-footer: rgba(1, 1, 52, 0.6);
+$primary-footer:#0A2240;
+$dark-footer:#021627;
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: $light-color;
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+}
+
+
+/* Header */
+.header {
+  background-color: $dark-color;
+  color: $light-color;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;    
+}
+
+.logo {
+    width: 80px;
+    margin: -15px 0 0 50px;
+    border-radius: 50%;
+    position: absolute;
+}
+.nav-link {
+  color: $light-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  display: inline;
+}
+
+
+
+
+
+/* Hero Section */
+.home {
+  height: 80vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-color; 
+
+  .carousel {
+    width: 100%;
+    .carousel-item {
+      .d-flex {
+        align-items: center;
+        justify-content: center;
+        img {
+          border-radius: 10px;
+        }
+        .text-center {
+          h3 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+          }
+          p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+          }
+          .btn {
+            font-size: 1.1rem;
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Products Section */
+.products {
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    justify-content: center;
+  }
+
+  .card {
+    border: 1px solid $dark-border;
+    position: relative; 
+    transition: background 0.5s ease;
+    display: flex;
+    flex-direction: column; 
+    height: 400px; 
+    display: flex;
+    flex-direction: column;
+
+    // Nike logo styles
+    .nike-logo {
+      position: relative;
+      top: 10px;
+      left: 60%;
+      transform: scale(1);
+      opacity: 2;
+      transition: transform 1s ease, opacity 5s ease;
+      z-index: 100;
+      width: 70px;
+    }
+
+    &:hover .nike-logo {
+      transform: translate(10%, 90%) scale(1);
+      opacity: 1; 
+    }
+
+    // Product image styles
+    .card-img-top {
+      width: 100%;
+      height: 100px;
+      object-fit: cover; 
+      transition: transform 0.5s ease;
+      transform-origin: center;
+
+      &:hover {
+        transform: scale(1.4) rotateY(210deg) rotateZ(-15deg);
+      }
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; 
+      flex-grow: 1; 
+
+      .card-title {
+        color: $primary-color;
+      }
+
+      .btn {
+        background-color: $primary-color;
+        border: none;
+        margin: 0 0 0 2px;
+
+        &:hover {
+          background-color: $primary-hover-color; 
+        }
+      }
+    }
+  }
+}
+
+  
+
+/* Footer */
+.cta-section {
+    background: url('/src/assets/images/Sneaker.jpg') no-repeat center center/cover;
+    color: $light-color;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1000;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $primary-color-footer;
+        z-index: -1;
+  }
+  .dev-title {
+    letter-spacing: 5px;
+    font-size: 50px;
+  }
+  .mail {
+    color: $light-color;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+  }
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: $primary-footer;
+    color: $light-color;
+    padding: 60px 20px;
+    a {
+        color: #FFC107;
+        text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.newsletter-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+}
+.submit {
+  margin-top: 5px;
+    background-color: #FFC107;
+    border: none;
+    padding: 5px 15px;
+    color: $dark-color;
+    font-weight: bold;
+    border-radius: 3px;
+  }
+}
+.copyright {
+    background: $dark-footer ;
+    color: $light-color;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+} 
+
+
+
+
