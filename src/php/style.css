@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url('sh.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Form Container */
+.form-container {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #222;
+}
+
+/* Logo */
+.logo {
+    width: 80px;
+    height: auto;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+/* Input Fields */
+input {
+    width: 93%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.333);
+}
+
+input:focus {
+    border: 2px solid #007bff;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Links */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Password Field Wrapper */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+/* Eye Icon */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #007bff;
+    user-select: none;
+}
+
+.toggle-password:hover {
+    color: #0056b3;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #181717;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #232323;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+}
