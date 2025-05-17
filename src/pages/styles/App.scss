@@ -1,0 +1,22 @@
+/* src/styles/App.scss */
+.app {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    padding-top: 70px; // Space for mobile header
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+    padding-top: 70px; // Space for mobile header
+  }
+}

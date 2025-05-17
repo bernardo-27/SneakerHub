@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Developers() {
   return (
-<section class="cta-section text-center py-4">
+<section class="cta-section text-center py-4 "id="developers">
   <div class="container">
       <div class="mt-4">
           <h3 class="dev-title mb-3 fw-bold fst-italic">Developers </h3>
@@ -41,7 +41,7 @@ export default function Developers() {
                       <p class="mail text-primary fs-6 small mb-0">jannahmaeumayat03@gmail.com</p>
                   </div>
               </div>
-              <div class="row justify-content-center">
+              <div class="row justify-content-center bottom" >
                   <div class="col-12 col-md-6">
                       <div class="rounded">
                           <p class="fw-bold fs-4 mb-0">Christine Lorence H. Bonifacio</p>

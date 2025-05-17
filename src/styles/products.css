@@ -85,6 +85,14 @@
     margin: 0 0 0 2px;
 }
 
-    .btn:hover {
-      background-color: rgb(0, 106, 245); 
-    }
+.btn:hover {
+  background-color: rgb(0, 63, 145); 
+}
+.btn-warning {
+  padding: 9px;
+  color: black;
+  background-color: rgb(245, 200, 0);
+}
+.btn-warning:hover {
+  background-color: rgb(255, 174, 0);
+}

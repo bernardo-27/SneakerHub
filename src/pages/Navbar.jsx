@@ -64,9 +64,9 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <a
-                className={`nav-link ${activeLink === "#contact" ? "active" : ""}`}
-                href="#contact"
-                onClick={() => setActiveLink("#contact")}
+                className={`nav-link ${activeLink === "#developers" ? "active" : ""}`}
+                href="#developers"
+                onClick={() => setActiveLink("#developers")}
               >
                 Contact
               </a>

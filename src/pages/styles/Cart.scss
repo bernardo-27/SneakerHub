@@ -1,0 +1,111 @@
+// Cart.scss
+
+.cart-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #000000;
+  font-weight: 600;
+}
+
+// Table styling
+.cart-table {
+  th {
+    background-color: #FFD700; // Yellow header
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  td {
+    vertical-align: middle;
+    text-align: center;
+    color: #000000;
+
+    .product-name {
+      font-weight: 500;
+    }
+  }
+
+  tr:hover {
+    background-color: #f0f0ff;
+  }
+}
+
+.quantity-controls {
+  button {
+    background-color: transparent;
+    border: 1px solid #000000;
+    color: #000000;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: #FFD700;
+      border-color: #FFD700;
+      color: #000000;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    font-weight: 500;
+  }
+}
+
+.order-summary {
+  background-color: #000000;
+  color: white;
+
+  .card-title {
+    color: #FFD700;
+    font-weight: bold;
+  }
+
+  .btn-primary {
+    background-color: #FFD700;
+    border: none;
+    color: #000000;
+    font-weight: bold;
+
+    &:hover {
+      background-color: darken(#FFD700, 10%);
+      color: #000000;
+    }
+  }
+
+  .d-flex span:first-child {
+    color: #ffffff;
+  }
+
+  .d-flex span:last-child {
+    color: #ffffff;
+    font-weight: bold;
+  }
+}
+
+.alert {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.btn-link {
+  color: #1a73e8; // Blue link for "Try Again"
+  text-decoration: underline;
+
+  &:hover {
+    color: darken(#1a73e8, 10%);
+  }
+}

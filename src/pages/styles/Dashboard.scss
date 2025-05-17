@@ -1,0 +1,98 @@
+// Dashboard.scss
+
+.bg-light {
+  background-color: #f9f9f9 !important;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .card-title {
+    color: #000000;
+  }
+
+  .text-muted {
+    color: #666 !important;
+  }
+
+  .text-primary {
+    color: #FFD700 !important; // Yellow price text
+  }
+
+  .btn-outline-primary {
+    color: #FFD700;
+    border-color: #FFD700;
+    font-weight: 500;
+
+    &:hover {
+      background-color: #FFD700;
+      color: #000000;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .btn-primary {
+    background-color: #1a73e8;
+    border: none;
+    font-weight: 500;
+
+    &:hover {
+      background-color: darken(#1a73e8, 10%);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .rounded-pill {
+    border-radius: 50px;
+  }
+
+  .small {
+    font-size: 0.85rem;
+  }
+
+  img {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.swal2-popup .product-confirm img {
+  margin-bottom: 10px !important;
+}
+
+.card {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{($i * 0.1)}s;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
